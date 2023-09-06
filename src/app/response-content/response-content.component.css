@@ -1,0 +1,13 @@
+.modal-parent {
+  margin: 10px;
+  border: solid;
+  border-radius: 10px;
+}
+
+.modal-child{
+  margin: 5px;
+  overflow-wrap: break-word;
+  overflow: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,13 @@
+.loadingcontainer{
+  background-color: rgba(252, 252, 252, 0.301);
+  /* height: 30vh;
+  width: 30vh; */
+}
+
+.loadingsymbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vh;
+  height: 30vh;
+}

@@ -1,0 +1,43 @@
+<h1 style="text-align: center">Choose Job Posting</h1>
+<div class="divParent">
+  <div class='card' *ngFor="let Fcard of displayFilteredCards">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-subtitle></mat-card-subtitle>
+        <mat-card-title>{{ Fcard.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p
+        [innerHTML]="
+        Fcard.showFullDescription ? Fcard.description : Fcard.shortDescription
+        "
+      ></p>
+      <button (click)="toggleDescriptionFcard(Fcard)" mat-button>Show More</button>
+        <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <a  color="primary" mat-button href="{{ Fcard.link }}" target="_blank"  class="Fcard-link">Click Here To Apply</a>
+        <button color="accent" mat-button *ngIf="!isloading"style="margin-left: 20px"(click)="generateProposal(Fcard.description)">Generate Proposal</button>
+      </mat-card-actions>
+      <mat-card-footer>
+        <mat-progress-bar mode="determinate"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+
+  <!-- <div class="divchild">
+    <h1 style="text-align: center;">Filtered Data</h1>
+    <div class="card" *ngFor="let Fcard of displayFilteredCards">
+      <h2 class="card-title">{{ Fcard.title }}</h2>
+      <a href="{{ Fcard.link }}" class="Fcard-link">Click Here To Apply</a>
+      <p
+        [innerHTML]="
+        Fcard.showFullDescription ? Fcard.description : Fcard.shortDescription
+        "
+      ></p>
+      <button (click)="toggleDescriptionFcard(Fcard)">Show More</button>
+
+
+    </div>
+  </div> -->
+</div>
